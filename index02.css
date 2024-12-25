@@ -1,0 +1,361 @@
+/* AI应用案例页面特有样式 */
+
+/* 页面头部横幅 */
+.page-header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* 主要内容区域 */
+.main-container {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 2rem;
+}
+
+/* 案例卡片 */
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.case-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.case-card:hover {
+    transform: translateY(-4px);
+}
+
+.case-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.case-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.case-card:nth-child(1) .case-image::before {
+    /* 低碳语言模型 - 蓝紫色科技感渐变 */
+    background: linear-gradient(135deg, #4834d4, #686de0);
+}
+
+.case-card:nth-child(2) .case-image::before {
+    /* 医疗机器人 - 绿色健康渐变 */
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.case-card:nth-child(3) .case-image::before {
+    /* 书生模型 - 深蓝科技感渐变 */
+    background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+.case-card:nth-child(4) .case-image::before {
+    /* 人形机器人 - 橙色科技感渐变 */
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+.case-image::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 10%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 10%);
+    opacity: 0.8;
+}
+
+.case-card:hover .case-image::before {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.case-image i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+.industry-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.industry-tag.healthcare { background: #2ecc71; }
+.industry-tag.finance { background: #3498db; }
+.industry-tag.education { background: #9b59b6; }
+.industry-tag.manufacturing { background: #e67e22; }
+.industry-tag.ai-model { background: #8e44ad; }
+.industry-tag.robotics { background: #d35400; }
+.industry-tag.research { background: #16a085; }
+.industry-tag.smart-city { background: #2980b9; }
+
+.case-content {
+    padding: 1.5rem;
+}
+
+.case-content h2 {
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.case-meta {
+    display: flex;
+    gap: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.case-meta i {
+    color: #007bff;
+    margin-right: 0.25rem;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    background: #f8f9fa;
+    color: #666;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+.case-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #007bff, #00a0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.view-details {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 右侧边栏 */
+.sidebar-section {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-section h3 i {
+    color: #007bff;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cases-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .case-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header {
+        padding: 2rem 1rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* 全球AI活力地图样式 */
+.ai-vibrancy {
+    background: white;
+}
+
+.country-rankings {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.country-rankings .country-card {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    gap: 1rem;
+}
+
+.country-rankings .country-card:hover {
+    transform: translateX(8px);
+    background: #f0f2f5;
+}
+
+.country-rankings .country-flag {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.country-rankings .fi {
+    font-size: 2em;
+    line-height: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.country-rankings .country-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.country-rankings .rank-num {
+    width: 24px;
+    height: 24px;
+    background: #4834d4;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.country-rankings h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    flex: 1;
+}
+
+.country-rankings .score {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4834d4;
+    padding: 0.25rem 0.75rem;
+    background: rgba(72, 52, 212, 0.1);
+    border-radius: 20px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .country-rankings .country-card {
+        padding: 0.5rem;
+    }
+    
+    .country-rankings .score {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+/* 添加数据来源样式 */
+.data-source {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.data-source p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+} 
